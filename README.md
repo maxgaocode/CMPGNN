@@ -19,16 +19,14 @@ Taking the dataset Photo as an example, run the following command to obtain the 
     
     python traincmpgnn.py   --dataset  Photo    --lr 0.001  --weight_decay  5e-5  --dropout 0.5      --train_rate 0.6    --K=2        --step1=2.0    --step2=0.01
 
-## Code
-The code is divided as follows: 
-* The [main.py](https://github.com/hfawaz/InceptionTime/blob/master/main.py) python file contains the necessary code to run an experiement. 
-* The [utils](https://github.com/hfawaz/InceptionTime/tree/master/utils) folder contains the necessary functions to read the datasets and visualize the plots.
-* The [classifiers](https://github.com/hfawaz/InceptionTime/tree/master/classifiers) folder contains two python files: (1) [inception.py](https://github.com/hfawaz/InceptionTime/tree/master/classifiers/inception.py) contains the inception network; (2) [nne.py](https://github.com/hfawaz/InceptionTime/tree/master/classifiers/nne.py) contains the code that ensembles a set of Inception networks. 
+
+## Codes and datasets
+The implementation of this code is largely built upon [BernNet](https://github.com/ivam-he/BernNet) and [FAGCN](https://github.com/bdy9527/FAGCN)
+
+Folllowing the guidence of BernNet, the datasets are splits in different parts including trainning set, validation set and testing set. In the project, Changing the ' --train_rate ' and ' --val_rate ' parameters will directly change the different sample splits. For example, ' --train_rate=0.6 ' and ' --val_rate=0.2 ' will result in a 60% 20% 20% training, validation and test set split. In our experiment, --val_rate takes a fixed value of 0.2, and --train_rate takes a value from {0.1, 0.2, 0.3, 0.4, 0.5, 0.6 }. The rest is divided into the test set.
+
 
 ## Contact
-The implementation of this code is largely built upon [FAGCN](https://github.com/bdy9527/FAGCN)
-
-## Acknowledgements
 If you have any questions, feel free to contact Yuan Gao through [Email](maxgaoyuan@njust.edu.cn) or Github issues. Pull requests are highly welcomed!
 
 
