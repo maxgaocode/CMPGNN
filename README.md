@@ -9,7 +9,9 @@ Graph Neural Networks (GNNs) have achieved great success in semi-supervised lear
 
 ## Training baselines
 For GCN,GAT,GraphSage, GPRGNN,BernNet, run the following command to obtain the experimental results:
-    cd Baselinenets/
+    
+   cd Baselinenets/
+
     python  baselinemain.py   --dataset xxx   --lr 0.001  --weight_decay 0  --net xx
 
 ## Training CMPGNN
@@ -18,7 +20,7 @@ Taking the dataset Photo as an example, run the following command to obtain the 
     python main.py   --dataset  Photo    --lr 0.001  --weight_decay  5e-5  --dropout 0.5      --train_rate 0.6    --K=2        --step1=2.0    --step2=0.01
 
 ## Contact
-The implementation of this code is largely built upon [CMPGNN](https://github.com/maxgaocode/CMPGNN)
+The implementation of this code is largely built upon [FAGCN](https://github.com/bdy9527/FAGCN)
 
 ## Acknowledgements
 If you have any questions, feel free to contact Yuan Gao through [Email](maxgaoyuan@njust.edu.cn) or Github issues. Pull requests are highly welcomed!
