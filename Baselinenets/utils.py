@@ -7,6 +7,38 @@ import scipy.sparse as sp
 import torch
 import os
 from torch_geometric.utils import to_scipy_sparse_matrix
+'''
+import os.path as osp
+
+def get_PtbAdj(root,name,attack_method,ptb_rate):
+
+    if attack_method == 'mettack' or attack_method == 'metattack':
+        attack_method = 'meta'
+    name = name.lower()
+    data_filename = osp.join(root,
+                '{}_{}_adj_{}.npz'.format(name, attack_method, ptb_rate))
+
+    adj = sp.load_npz(data_filename)
+
+    return adj
+
+   if args.attack in ['meta', 'nettack', 'random']:
+        perturbed_adj = get_PtbAdj(root="./AttackData/{}".format(args.attack),
+                                   name=args.dataset,
+                                   attack_method=args.attack,
+                                   ptb_rate=args.ptb_rate)
+    adj = sp.coo_matrix(perturbed_adj)
+    values = adj.data
+    indices = np.vstack((adj.row, adj.col))  # 我们真正需要的coo形式
+    print(indices)
+    newedge_index = torch.LongTensor(indices)  # PyG框架需要的coo形式
+    print('the number of newedge')
+    print(newedge_index.shape[1])
+
+    data.edge_index = newedge_index
+
+
+'''
 
 def index_to_mask(index, size):
     mask = torch.zeros(size, dtype=torch.bool)

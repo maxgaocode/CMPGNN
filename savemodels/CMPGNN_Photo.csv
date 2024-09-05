@@ -1,0 +1,6 @@
+net:CMPGNN, dataset:Photo,  lr:0.001, weight_decay:5e-05, TrainRate:0.2, K:2,   activation:elu, step1:2.0, step2:0.01, acc_test:92.75261324041813, accstd:0.4416814402120976,
+net:CMPGNN, dataset:Photo,  lr:0.001, weight_decay:5e-05, TrainRate:0.3, K:2,   activation:relu, step1:2.0, step2:0.01, acc_test:93.98274058577405, accstd:0.5909636839531469,
+net:CMPGNN, dataset:Photo,  lr:0.001, weight_decay:5e-05, TrainRate:0.4, K:2,   activation:relu, step1:2.0, step2:0.01, acc_test:93.9066496163683, accstd:0.7117318972398093,
+net:CMPGNN, dataset:Photo,  lr:0.001, weight_decay:5e-05, TrainRate:0.1, K:2,   activation:elu, step1:2.0, step2:0.01, acc_test:91.83295964125561, accstd:0.6265585980856944,
+net:CMPGNN, dataset:Photo,  lr:0.001, weight_decay:5e-05, TrainRate:0.5, K:2,   activation:None, step1:2.0, step2:0.01, acc_test:94.05564263322883, accstd:0.6773558621029835,
+net:CMPGNN, dataset:Photo,  lr:0.001, weight_decay:5e-05, TrainRate:0.6, K:2,   activation:None, step1:2.0, step2:0.01, acc_test:94.04858299595142, accstd:0.818900348427885,
