@@ -54,14 +54,7 @@ class StepConv(MessagePassing):
         ss=torch.mul(h3[self.row], h4[self.col])
         s = torch.sum(ss, dim=1)
 
-        if self.edgeweight==1:
-            s = torch.sigmoid(-1 * s)
-            h = self.propagate(self.edge_index, size=(numnode, numnode), x=h3, norm=s, flow='source_to_target')
-            h3=torch.add(h1, self.step1*h)
-
-            h4 = self.propagate(self.edge_index, size=(numnode, numnode), x=h4, norm=1-s, flow='source_to_target')
-            x = torch.sub(h3, self.step1*h4)
-        else:
+        if self.edgeweight==1:            
             s = torch.sigmoid(s)
             h = self.propagate(self.edge_index, size=(numnode, numnode), x=h3, norm=1-2*s, flow='source_to_target')
             h3 = torch.add(h1, self.step1 * h)
