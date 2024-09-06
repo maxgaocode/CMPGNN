@@ -1,0 +1,5 @@
+net:CMPGNN, dataset:Computers,  lr:0.001, weight_decay:4e-05, TrainRate:0.1, K:2,   activation:relu, step1:2.0, step2:0.01, acc_test:88.37081687798795, accstd:1.3689888340753285,
+net:CMPGNN, dataset:Computers,  lr:0.001, weight_decay:5e-05, TrainRate:0.2, K:2,   activation:elu, step1:2.0, step2:0.01, acc_test:88.8424624333495, accstd:2.314538375642652,
+net:CMPGNN, dataset:Computers,  lr:0.001, weight_decay:5e-05, TrainRate:0.5, K:2,   activation:elu, step1:2.0, step2:0.01, acc_test:88.07930156420515, accstd:0.9698443155890284,
+net:CMPGNN, dataset:Computers,  lr:0.001, weight_decay:5e-05, TrainRate:0.6, K:2,   activation:relu, step1:2.0, step2:0.01, acc_test:89.60995850622409, accstd:0.5788195835739156,
+net:CMPGNN, dataset:Computers,  lr:0.001, weight_decay:5e-05, TrainRate:0.4, K:2,   activation:None, step1:2.0, step2:0.01, acc_test:89.79347123464768, accstd:1.8374130654350764,
