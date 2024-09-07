@@ -7,6 +7,14 @@ Graph Neural Networks (GNNs) have achieved great success in semi-supervised lear
 
 ![Framework](CMPGNN.png)
 
+## OverReview
+
+* `./traincmpgnn`: This directory contains the model of CMPGNN.
+* `./Baselinenets/dataset_loader.py`: This is the code to load datasets.
+* `./Baselinenets/h2gcnmain.py`: It contains the model named H2GCN, which is built on[code](https://github.com/GitEventhandler/H2GCN-PyTorch/).
+* `./Baselinenets/trainSGAT.py`: It contains the model named SGAT, which is built on [paper](https://arxiv.org/pdf/1912.00552)  [code](https://github.com/Yangyeeee/SGAT).
+* `./Baselinenets/baselinemain.py`: The rest baselines related to GCN,GAT,GraphSage, GPRGNN,BernNet, etc.
+
 ## Training baselines
 For GCN,GAT,GraphSage, GPRGNN,BernNet, run the following command to obtain the experimental results:
     
@@ -23,7 +31,14 @@ Taking the dataset Photo as an example, run the following command to obtain the 
 ## Codes and datasets
 The implementation of this code is largely built upon [BernNet](https://github.com/ivam-he/BernNet) and [FAGCN](https://github.com/bdy9527/FAGCN)
 
-Following the guidance of BernNet, the datasets are splits in different parts including training set, validation set and testing set. In the project, Changing the ' --train_rate ' and ' --val_rate ' parameters will directly change the different sample splits. For example, ' --train_rate=0.6 ' and ' --val_rate=0.2 ' will result in a 60% 20% 20% training, validation and test set split. In our experiment, --val_rate takes a fixed value of 0.2, and --train_rate takes a value from {0.1, 0.2, 0.3, 0.4, 0.5, 0.6 }. The rest is divided into the test set.
+Following the guidance of BernNet, the datasets are divided into different parts, validation set and testing set. In the project, Changing the ' --train_rate ' and ' --val_rate ' parameters will directly change the different sample splits. For example, ' --train_rate=0.6 ' and ' --val_rate=0.2 ' will result in a 60% 20% 20% training, validation and test set split. In our experiment, --val_rate takes a fixed value of 0.2, and --train_rate takes a value from {0.1, 0.2, 0.3, 0.4, 0.5, 0.6 }. The rest is divided into the test set.
+
+
+
+## Attack
+The attacked topology are built upon the offical PyTorch implementation of "Towards Robust Graph Neural Networks for Noisy Graphs with Sparse Labels" (RS-GNN). [[paper]](https://arxiv.org/pdf/2201.00232.pdf) [code](https://github.com/EnyanDai/RSGNN)
+For the perturbed adjacency matrix, it is stored as: `./Attackadj/{attack}/{dataset}_{attack}_adj_{ptb_rate}.npz`.  You can get the attacked topology as you need. We upload some attacked adjacency though the  space is limited . 
+
 
 
 ## Citation
